@@ -8,9 +8,9 @@ Inspired by [RULE](https://arxiv.org/abs/2407.05131), we designed a retriever th
 ![System Architecture][system-architecture]
 ### 2. Calibrated Retrieved Context Selection
 A challenge in RAG systems is the trade-off between coverage and relevance. While retrieving too few reports may omit critical information, retrieving too many can introduce noisy or unrelated context. Inspired by the MMed-RAG method [1], we implement an adaptive truncation strategy. Let $S_i$ be the similarity score of the $ith$ retrieved context. We compute a similarity drop ratio:
-```math
-u_i = \log\left( \frac{S_i}{S_{i+1}} \right), \quad \text{for } 0 < i \leq K
-```
+
+$$u_i = \log\left( \frac{S_i}{S_{i+1}} \right), \quad \text{for } 0 < i \leq K$$
+
 
 If ui ​exceeds a defined threshold , it indicates a sharp drop in relevance, and the retrieval list is truncated at that point. This ensures that only the most relevant contextual data is used in generation, enhancing output quality.
 
