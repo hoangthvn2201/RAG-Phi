@@ -1,9 +1,10 @@
 # RAG-Phi: Enhancing CXR report generation task with light-weight Vision Language Models
+This project aims to build a Retrieval-Augmented Generation (RAG) system to support lightweight vision-language models in generating medical reports. Instead of changing the model itself, we focus on adding a retrieval module that brings in useful medical information from external sources. The main goal is to improve the accuracy and completeness of the reports while keeping the system fast and easy to run. This makes it more practical for use in real hospitals and clinics.
 
 ## Requirements
 1. Clone this repository and navigate to RAG-Phi folder
 ```bash
-git clone https://github.com
+git clone https://github.com/hoangthvn2201/RAG-Phi.git
 cd RAG-Phi
 ```
 
