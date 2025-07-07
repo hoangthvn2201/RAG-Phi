@@ -11,7 +11,7 @@ asttokens==2.4.1
 async-timeout==4.0.3
 attrs==23.2.0
 beautifulsoup4==4.12.3
-bitsandbytes==0.43.1
+bitsandbytes==0.41.3
 braceexpand==0.1.7
 cachetools==5.3.3
 certifi==2022.12.7
@@ -25,7 +25,6 @@ DataProperty==1.0.1
 datasets==2.16.0
 debugpy==1.8.1
 decorator==5.1.1
-deepspeed==0.14.2
 dill==0.3.7
 distro==1.9.0
 docker-pycreds==0.4.0
