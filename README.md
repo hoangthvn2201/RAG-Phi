@@ -37,11 +37,38 @@ pip install trl
 
 ### 3. Download the required model checkpoints [Phi-3.5-vision-instruct](https://huggingface.co/microsoft/Phi-3.5-vision-instruct), [LLaVA-Med-1.5](https://huggingface.co/microsoft/llava-med-v1.5-mistral-7b) from huggingface.
 
-## 📞 Contact
+## OpenCLIP Finetuning
+
+Make sure to specify the data paths and the checkpoint saving location
+```Shell
+bash ./scripts/finetune_clip.sh
+```
+
+## Benchmark RAG system with different VLMs
+
+### 1. LlavaMed 7B
+```Shell
+python llava_med_7b_inference_test.py \
+  --model_path microsoft/llava-med-v1.5-mistral-7b \
+  --image_folder path-to-iuxray-image-folder \
+  --question_file path-to-report-test-file \
+  --answer_file answer_file.jsonl
+```
+
+### 2. Phi 3.5
+```Shell
+python phi_3.5_infernce_test.py \
+  --model_id Lexius/Phi-3.5-vision-instruct \
+  --image_folder path-to-iuxray-image-folder \
+  --question_file path-to-report-test-file \
+  --answer_file answer_file.jsonl \
+  --reference
+```
+<!-- ## 📞 Contact
 
 For questions, feedback, or contributions, please reach out via:
 
 - 📧 **Email**: [huyhoangt2201@gmail.com](mailto:huyhoangt2201@gmail.com)  
 - 🌐 **LinkedIn**: [@huyhoangt2004](https://www.linkedin.com/in/huyhoangt2004/) 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-[system-architecture]: images/system_architecture.png
+[system-architecture]: images/system_architecture.png -->
